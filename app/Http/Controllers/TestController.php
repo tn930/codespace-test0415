@@ -9,6 +9,8 @@ class TestController extends Controller
 {
     public function index()
     {
-        dd(User::all());
+        $users = User::all();
+        return view('index',compact('users'));
+
     }
 }
